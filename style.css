@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #EFF1FF;
+    --bg-secundary: #8E9AAF;
+    --bg-heading: #CBC0D3;
+    --bg-spam: #FEEAFA;
+
+
+    --text-heading: #ffffff;
+
+    --ff-heading: 'Staatliches', cursive;
+    --ff-body: 'Palanquin', sans-serif;
+
+
+    font-size: 62.5%;
+}
+
+
+body {
+    font-size: 1.6rem;
+}
+
+
+header {
+
+    text-align: center;
+    background: var(--bg-secundary);
+    font-family: var(--bg-heading);
+
+    padding-bottom: 2.9rem;
+    padding-top: 3.2rem;
+}
+
+header h2 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-heading);
+    color: var(--text-heading);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    height: 4.9rem;
+    font-weight: 400;
+    font-size: 4.0rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.575);
+
+    font-family: var(--ff-heading);
+
+}
+
+.box {
+    background-color: var(--bg-primary);
+}
+
+
+main {
+    max-width: 32rem;
+    margin: auto;
+
+    display: grid;
+    gap: 3.6rem;
+
+}
+
+
+
+main p {
+    padding-top: 1.4rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+
+    font-family: var(--ff-body);
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 6.0rem;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+main p,
+img {
+    animation-name: topdown;
+    animation-duration: 700ms;
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    object-fit: contain;
+    transition-duration: 400ms;
+
+}
+
+span {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+    background-color: var(--bg-spam);
+    border-radius: 2.0rem;
+    height: 3.5rem;
+    width: 11.2rem;
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
